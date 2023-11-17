@@ -1,9 +1,8 @@
-let saldo = diferencaVitoriasDerrotas(50,60)
+let saldo = diferencaVitoriasDerrotas(100,50)
 let nomeRank = ["Ferro","Bronze","Prata","Ouro","Diamante","Lendário","Imortal"]
 let numeroRank = 0
 
-calcularRank()
-console.log(`O Herói tem um saldo de ${saldo} vitórias e está no nível ${nomeRank[numeroRank]}!!!`)
+main()
 
 function diferencaVitoriasDerrotas(vitorias = 0 , derrotas = 0){
     return vitorias - derrotas;
@@ -30,4 +29,8 @@ function calcularRank(){
         numeroRank = 6
     }
     return numeroRank
+}
+function main(){
+    calcularRank()
+    console.log(`O Herói tem um saldo de ${saldo} vitórias e está no nível ${nomeRank[numeroRank]}!!!`)
 }
